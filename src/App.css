@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name-heading{
+    width: fit-content;
+    margin: 1rem auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+    position: fixed;
+    top: 6rem;
+    left: 1rem;
+    font-size: 18px;
+}
+.navbar ul{
+    list-style: none;
+    text-decoration: none;
+}
+.navbar ul li{
+    margin: 3rem 2rem;
+}
+.link{
+    
+    padding: 12px;
+    color: rgb(82, 82, 82);
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.active{
+    
+    padding: 12px;
+    color: rgb(255, 68, 0);
+    font-weight: bold;
+    text-decoration: none;
+    border-right: 4px solid black;
+
+}
+.container{
+    margin-left: 15rem;
+}
+.mail-container{
+    margin-right: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-tag{
+    position: relative;
+    top: 0.6555rem;
+    background-color: white;
+    width: fit-content;
+    left: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-box{
+    border: 2px solid black;
+    padding: 1rem;
+}
+
+.filter-box p{
+    position: relative;
+    top: -0.8rem;
+    background-color: white;
+    width: fit-content;
+    left: 1rem;
+}
+
+label{
+    margin-right: 3rem;
+}
+
+.heading{
+    margin: 1rem 0px 2rem;
+}
+.mail-box{
+    background-color: aliceblue;
+    outline: 0.5px solid gray;
+    padding: 1rem;
+    border-radius: 12px;
+}
+.mail-box:hover{
+    background-color: white;
+}
+.upper{
+    height: 3rem;
+}
+.star-btn{
+    position: relative;
+    top: -1.7rem;
+    left: 71rem;
+    padding: 4px 11px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.mail-content{
+    margin: 0px 0px 0.5rem;
+}
+
+.lower{
+    position: relative;
+    height: 25px;
+}
+.lower a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px
+}
+
+.btn-box{
+    width: fit-content;
+    position: absolute;
+    right: 0px;
+    top: -0.1rem;
+}
+
+.btn{
+    margin: 0px 0.5rem;
+    padding: 3px 12px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.red{
+    color: red;
+}
+.yellow{
+    color: orangered;
+}
+.green{
+    color: green;
 }
