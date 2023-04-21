@@ -9,6 +9,12 @@ export const DataReducer = (state, action) => {
           TrashData: [...state.TrashData, action.item],
           mailsData: state.mailsData.filter(({ mId }) => mId !== action.item.mId),
         };
+      case "RESTORE_DELETE":
+        return {
+          ...state,
+          TrashData: state.TrashData.filter(({mId})=> mId !== action.mail.mId),
+          mailsData: [...state.mailsData, action.mail]
+        };
   
       case "READ_ITEM":
         return {

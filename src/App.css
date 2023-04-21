@@ -80,16 +80,14 @@ label{
     padding: 1rem;
     border-radius: 12px;
 }
-.mail-box:hover{
-    background-color: white;
-}
 .upper{
+    position: relative;
     height: 3rem;
 }
 .star-btn{
-    position: relative;
-    top: -1.7rem;
-    left: 71rem;
+    position: absolute;
+    top: 0.4rem;
+    left: 95%;
     padding: 4px 11px;
     background-color: #ffffff;
     border: none;
@@ -124,6 +122,9 @@ label{
     cursor: pointer;
 }
 
+.bg-white{
+    background-color: white;
+}
 .red{
     color: red;
 }
