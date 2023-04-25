@@ -8,11 +8,11 @@ const Filter = () => {
     <div className='filter-box'>
       <form>
       <label htmlFor='unread-mail'>
-        <input type="checkbox" checked={showUnread} id="unread-mail" onChange={()=>dispatch({type:"TOGGLE_UNREAD"})} />
+        <input type="checkbox" checked={showUnread} id="unread-mail" onChange={()=>dispatch({type:"FILTER_BY", value:"unread"})} />
         Show unread emails
       </label>
       <label htmlFor='starred-mail'>
-        <input type="checkbox" checked={showStarred} id="starred-mail" onChange={()=> dispatch({type:"TOGGLE_STAR"})} />
+        <input type="checkbox" checked={showStarred} id="starred-mail" onChange={()=> dispatch({type:"FILTER_BY", value:"isStarred"})} />
         Show starred emails
       </label>
       </form>

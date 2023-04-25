@@ -1,20 +1,18 @@
 import React from 'react'
 import { useData } from '../Contexts/DataContext'
+import ShowMails from '../Components/ShowMails';
 
 const Spam = () => {
-  const {state:{mailsData}} = useData();
-  const spamData = mailsData.filter(({isSpam})=> isSpam);
-  return (
+  const {filteredData} = useData();
+  const Spam = filteredData.filter(({isSpam}) => isSpam);
+    return (
     <div className="container ">
-      <h2 className='heading'>Total Spam:{spamData.length}</h2>
+      <h2 className='heading'>Total Spam:{Spam.length}</h2>
 
-    {spamData.length > 0 && <div className='mail-container'>
+    {Spam.length > 0 && <div className='mail-container'>
       {
-        spamData.map(({mId,subject, content})=> {
-          return <div className='mail-box' key={mId}>
-                    <h2 className='upper'>Subject:{subject}</h2>
-                    <p className='mail-content'>{content}</p>
-                </div>
+        Spam.map((element)=> {
+          return <ShowMails key={element.mId} element={element} />
             })
           }
     </div>}

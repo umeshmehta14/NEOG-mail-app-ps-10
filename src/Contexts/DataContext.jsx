@@ -7,26 +7,12 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const initial = {
     mailsData: mails,
-    TrashData: [],
-    showUnread: false,
-    showStarred: false,
+    filterBy:[]
   };
   const [state, dispatch] = useReducer(DataReducer, initial);
 
-  const checkFilter = () => {
-    let filtered = state.mailsData;
-
-    if (state.showUnread) {
-      filtered = filtered.filter((email) => email.unread);
-    }
-
-    if (state.showStarred) {
-      filtered = filtered.filter((email) => email.isStarred);
-    }
-
-    return filtered;
-  };
-  const filteredData = checkFilter();
+  const filtered = [...state.mailsData];
+  const filteredData = state.filterBy.length !== 0 ? filtered.filter((email) => state.filterBy.every((value)=> email[value])): filtered;
 
   return (
     <DataContext.Provider value={{ filteredData, state, dispatch }}>

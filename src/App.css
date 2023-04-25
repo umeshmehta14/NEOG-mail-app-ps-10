@@ -24,14 +24,12 @@
     margin: 3rem 2rem;
 }
 .link{
-    
     padding: 12px;
     color: rgb(82, 82, 82);
     text-decoration: none;
 }
 
 .active{
-    
     padding: 12px;
     color: rgb(255, 68, 0);
     font-weight: bold;
@@ -133,4 +131,8 @@ label{
 }
 .green{
     color: green;
+}
+
+.bg-yellow{
+    background-color: yellow;
 }
