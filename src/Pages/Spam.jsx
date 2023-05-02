@@ -3,8 +3,6 @@ import { useData } from '../Contexts/DataContext'
 import ShowMails from '../Components/ShowMails';
 import Filter from '../Components/Filter';
 
-
-
 const Spam = () => {
   const {filteredData} = useData();
   const Spam = filteredData.filter(({isSpam}) => isSpam);
@@ -15,9 +13,8 @@ const Spam = () => {
 
     {Spam.length > 0 && <div className='mail-container'>
       {
-        Spam.map((element)=> {
-          return <ShowMails key={element.mId} element={element} />
-            })
+        Spam.map((element)=> <ShowMails key={element.mId} element={element} />
+            )
           }
     </div>}
           </div>

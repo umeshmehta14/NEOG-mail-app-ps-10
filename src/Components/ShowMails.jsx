@@ -13,7 +13,7 @@ const ShowMails = ({element,clicked}) => {
         <h2 className='mail-heading'>Subject:{subject}</h2>
         <button
         title={isStarred ? "Starred" : "Not Starred"}
-        className={`star-btn ${isStarred ? "yellow":""} ${!unread ? "bg-white":""}`} 
+        className={`star-btn ${isStarred ? "yellow":""} ${!unread ? "bg-white":""}`}
         onClick={() => dispatch({ type: "STAR_DATA", id: mId })}>
           {isStarred ? <AiFillStar/> : <AiOutlineStar/>}
         </button>

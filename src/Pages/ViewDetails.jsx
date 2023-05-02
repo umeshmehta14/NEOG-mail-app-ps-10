@@ -7,12 +7,12 @@ const ViewDetails = () => {
   const { mailId } = useParams();
   const {
     state: { mailsData }} = useData();
-  const selectedData = mailsData.find(({ mId }) => mId === mailId);
+  const selectedMail = mailsData.find(({ mId }) => mId === mailId);
 
   return (
     <div className="container">
       <div className="mail-container">
-      <ShowMails element={selectedData} clicked={true}/>
+      <ShowMails element={selectedMail} clicked={true}/>
       </div>
     </div>
   );
