@@ -12,7 +12,6 @@ const ViewDetails = () => {
   return (
     <div className="container">
       <div className="mail-container">
-        
       <ShowMails element={selectedData} clicked={true}/>
       </div>
     </div>

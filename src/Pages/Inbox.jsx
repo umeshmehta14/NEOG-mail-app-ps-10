@@ -10,6 +10,8 @@ const Inbox = () => {
 
   return (
     <div className="container">
+    <Filter />
+
       <h2 className="heading">
         Unread:{" "}
         {unreadMsg}

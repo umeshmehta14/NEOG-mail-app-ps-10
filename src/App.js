@@ -10,12 +10,8 @@ import Filter from './Components/Filter';
 function App() {
   return (
     <>
-      <h1 className='name-heading'>Umesh's MailBox</h1>
     <Header/>
-    <div className="container">
-
-    <Filter />
-    </div>
+      <h1 className='name-heading'>Umesh's MailBox</h1>
     <Routes>
       <Route path="/" element={<Inbox/>}/>
       <Route path="/spam" element={<Spam/>}/>

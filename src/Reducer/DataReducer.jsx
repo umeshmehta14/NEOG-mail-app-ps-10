@@ -5,7 +5,11 @@ export const DataReducer = (state, action) => {
         ...state,
         mailsData: state.mailsData.map((mail) =>
           mail.mId === action.id
-            ? { ...mail, isDeleted: mail.isDeleted ? false : true , isSpam: mail.isSpam ? false : mail.isSpam}
+            ? {
+                ...mail,
+                isDeleted: mail.isDeleted ? false : true,
+                isSpam: mail.isSpam ? false : mail.isSpam,
+              }
             : mail
         ),
       };
@@ -24,10 +28,14 @@ export const DataReducer = (state, action) => {
       return {
         ...state,
         mailsData: state.mailsData.map((mail) =>
-        mail.mId === action.id
-          ? { ...mail, isSpam: mail.isSpam ? false : true, isDeleted: mail.isDeleted ? false : mail.isDeleted }
-          : mail
-      ),
+          mail.mId === action.id
+            ? {
+                ...mail,
+                isSpam: mail.isSpam ? false : true,
+                isDeleted: mail.isDeleted ? false : mail.isDeleted,
+              }
+            : mail
+        ),
       };
     case "STAR_DATA":
       return {
@@ -39,7 +47,12 @@ export const DataReducer = (state, action) => {
         ),
       };
     case "FILTER_BY":
-      return { ...state, filterBy: state.filterBy.find((item)=> item === action.value ) ? state.filterBy.filter((item)=> item !== action.value) : [...state.filterBy, action.value]};
+      return {
+        ...state,
+        filterBy: state.filterBy.find((item) => item === action.value)
+          ? state.filterBy.filter((item) => item !== action.value)
+          : [...state.filterBy, action.value],
+      };
 
     default:
       break;

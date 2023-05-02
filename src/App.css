@@ -1,35 +1,40 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: serif;
-}
+    font-family: 'Fira Sans', sans-serif;
 
-.name-heading{
+
+}
+.name-heading {
     width: fit-content;
     margin: 1rem auto;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     top: 6rem;
     left: 1rem;
     font-size: 18px;
 }
-.navbar ul{
+
+.navbar ul {
     list-style: none;
     text-decoration: none;
 }
-.navbar ul li{
+
+.navbar ul li {
     margin: 3rem 2rem;
 }
-.link{
+
+.link {
     padding: 12px;
     color: rgb(82, 82, 82);
     text-decoration: none;
 }
 
-.active{
+.active {
     padding: 12px;
     color: rgb(255, 68, 0);
     font-weight: bold;
@@ -37,27 +42,22 @@
     border-right: 4px solid black;
 
 }
-.container{
+
+.container {
     margin-left: 15rem;
 }
-.mail-container{
+
+.mail-container {
     margin-right: 3rem;
 }
 
-.filter-tag{
-    position: relative;
-    top: 0.6555rem;
-    background-color: white;
-    width: fit-content;
-    left: 1rem;
-}
 
-.filter-box{
+.filter-box {
     border: 2px solid black;
     padding: 1rem;
 }
 
-.filter-box p{
+.filter-box p {
     position: relative;
     top: -0.8rem;
     background-color: white;
@@ -65,74 +65,133 @@
     left: 1rem;
 }
 
-label{
+label {
     margin-right: 3rem;
 }
 
-.heading{
+.heading {
     margin: 1rem 0px 2rem;
 }
-.mail-box{
+
+.mail-box {
     background-color: aliceblue;
     outline: 0.5px solid gray;
     padding: 1rem;
     border-radius: 12px;
+    min-width: 270px;
 }
-.upper{
+
+.upper {
     position: relative;
     height: 3rem;
 }
-.star-btn{
+
+
+.star-btn {
     position: absolute;
     top: 0.4rem;
     left: 95%;
-    padding: 4px 11px;
-    background-color: #ffffff;
     border: none;
     cursor: pointer;
-}
-.mail-content{
-    margin: 0px 0px 0.5rem;
+    font-size: 20px;
 }
 
-.lower{
+.mail-content {
+    margin: 10px 0px 0.5rem;
+}
+
+.lower {
     position: relative;
     height: 25px;
 }
-.lower a{
-    text-decoration: none;
+
+.lower a {
     color: black;
     font-size: 14px
 }
-
-.btn-box{
+.btn-box {
     width: fit-content;
     position: absolute;
     right: 0px;
     top: -0.1rem;
 }
 
-.btn{
+.btn {
     margin: 0px 0.5rem;
-    padding: 3px 12px;
+    width: 30px;
+    height: 30px;
     background-color: white;
     border: none;
     cursor: pointer;
+    font-size: 20px;
 }
 
-.bg-white{
+.btn:hover {
+    font-size: 22px;
+}
+
+.bg-white {
     background-color: white;
 }
-.red{
+
+.red {
     color: red;
 }
-.yellow{
-    color: orangered;
+
+.orange {
+    color: rgb(192, 105, 74);
 }
-.green{
+
+.green {
     color: green;
 }
 
-.bg-yellow{
-    background-color: yellow;
+.blue {
+    color: blue;
+}
+
+.yellow {
+    color: rgb(159, 159, 36);
+}
+
+@media only screen and (max-width: 750px) {
+    .navbar {
+        position: static;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .navbar ul {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 2rem;
+    }
+
+    .active {
+        padding: 12px;
+        color: rgb(255, 68, 0);
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 4px solid black;
+        border-right: none;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .mail-container {
+        margin: 0px;
+    }
+
+    .mail-heading {
+        width: 305px;
+    }
+
+    .inp-label {
+        display: block;
+    }
 }
